@@ -24,7 +24,7 @@
 4. Push committed changes to repo:
 	`git push origin`
 	
-## More Git Commands
+# More Git Commands
 Switching Branches:
 	`git switch BRANCH`
 	
@@ -35,9 +35,9 @@ Pull Repository Logs:
 	`git log`
 	
 Display all pulled Repository Files:
-`ls -la`
-	`-l`: Long list format
-	`-a`: Display all
+	`ls -la`
+		`-l`: Long list format
+		`-a`: Display all
 	
 Change remote URL: 
 `git remote set-url origin git://new.url.here`
@@ -51,7 +51,7 @@ Remove file from repository:
 Remove directory from repository:
 `git rm -r --cached <directory-path>`
 
-Creating and adding files to `.gitignore`:
+## Creating and adding files to gitignore
 1. Create `.gitignore` if it does not exist
 	`touch .gitignore`
 2. Update `.gitignore`:
