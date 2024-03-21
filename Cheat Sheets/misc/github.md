@@ -1,13 +1,12 @@
-# github
 
-## Connecting to Remote Repository
+# Connecting to Remote Repository
 
 1. Create New Directory
 2. Initialize Directory `git init`
 3. Connect to remote git repository `git remote add origin https://github.com/USERNAME/REPO_NAME.git` `git remote -v`
 4. Pull commits and current files in the repository `git fetch origin`
 
-## General Git Workflow
+# General Git Workflow
 
 1. Pull Repository Updates: `git pull origin`
 2. Stage files from current directory: `git add .` \
@@ -16,7 +15,7 @@
    _Note: Changes now made to local repo, need to push to remote repo_
 4. Push committed changes to repo: `git push origin`
 
-## More Git Commands
+# More Git Commands
 
 Switching Branches: `git switch BRANCH`
 
@@ -37,7 +36,7 @@ Remove file from repository: `git rm --cached <file-path>`
 
 Remove directory from repository: `git rm -r --cached <directory-path>`
 
-### Creating and adding files to .gitignore
+## Creating and adding files to .gitignore
 
 1. Create `.gitignore` if it does not exist `touch .gitignore`
 2. Update `.gitignore`: You will need to edit and add patterns representing the files or directories you wish to ignore. Each line in the `.gitignore` file specifies a pattern. Here are some examples:
