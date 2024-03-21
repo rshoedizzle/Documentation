@@ -2,14 +2,15 @@
 
 - [Welcome](README.md)
 ## Cheat Sheets​
-- [misc](misc.md)
-	- [github](github.md)
-	- [obsidian](obsidian.md)
+- [Overview](Cheat%20Sheets/Overview.md)
+- [github](github.md)
+- [obsidian](obsidian.md)
 ## Homelab Logs
-### Testing Sub Groups
+- [Overview](Homelab%20Logs/Overview.md)
 - [docker](docker.md)
 - [pi-hole](pi-hole.md)
 - [wireguard](wireguard.md)
 ## Enterprise Toolkit​
+- [Overview](Enterprise%20Toolkit/Overview.md)
 - [Azure](Azure.md)
 - [Google](Google.md)
