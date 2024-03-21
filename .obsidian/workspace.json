@@ -1,0 +1,152 @@
+{
+  "main": {
+    "id": "33c8891a469a78a7",
+    "type": "split",
+    "children": [
+      {
+        "id": "f6738f1d1bfa9b7c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "4ea6fc1d01580fb4",
+            "type": "leaf",
+            "state": {
+              "type": "empty",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "c877705153bdb9a7",
+    "type": "split",
+    "children": [
+      {
+        "id": "a46953a6bfc49526",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ebc7dc6ff946b69f",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "de01580daa4a4095",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "e0f2d7973b2f555a",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "cebd70440fe9623b",
+    "type": "split",
+    "children": [
+      {
+        "id": "be885ec377bfb033",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0df9d9d550c82e45",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "07b3f5027e0e40dd",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "57e6b97cdb3d142b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "8994574a7bdc5b58",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "4ea6fc1d01580fb4",
+  "lastOpenFiles": [
+    "README.md",
+    "page1/README.md",
+    "SUMMARY.md",
+    "page1",
+    "Documentation",
+    "Application Documentation",
+    "Homelab How-To",
+    "Cheat-Sheets"
+  ]
+}
