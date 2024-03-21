@@ -3,8 +3,8 @@
 - [Welcome](README.md)
 ## Cheat Sheets​
 - [Overview](Cheat%20Sheets/Overview.md)
-- [github](github.md)
-- [obsidian](obsidian.md)
+- [github](Cheat%20Sheets/misc/github.md)
+- [obsidian](Cheat%20Sheets/misc/obsidian.md)
 ## Homelab Logs
 - [Overview](Homelab%20Logs/Overview.md)
 - [docker](docker.md)
