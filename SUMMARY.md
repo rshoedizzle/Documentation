@@ -2,18 +2,17 @@
 
 - [Welcome](README.md)
 
-## Use headings to create page groups like this one​
+## Cheat Sheets​
 
-- [Cheat-Sheets](Cheat-Sheets/README.md)
+- [Cheat Sheets](Cheat%20Sheets/README.md)
     * [github](github.md)
     * [obsidian](obsidian.md)
 
-- [Homelab How To](Homelab%20How-To/README.md)
+## Homelab Logs
+- [Homelab Logs](Homelab%20Logs/README.md)
 	- [docker](docker.md)
 	- [pi-hole](pi-hole.md)
 	- [wireguard](wireguard.md)
-## A second-page group​
-
-- [Application Docs](Application%20Documentation/README.md)
-	- [Google](Google.md)
-	- [Azure](Azure.md)
+## Enterprise Toolkit​
+- [Google](Google.md)
+- [Azure](Azure.md)
