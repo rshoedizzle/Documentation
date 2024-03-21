@@ -1,6 +1,6 @@
 ‌# Summary​
 
-- [README](README.md)
+- [Welcome](README.md)
 
 ## Use headings to create page groups like this one​
 
