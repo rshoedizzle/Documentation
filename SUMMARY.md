@@ -2,16 +2,16 @@
 
 ## Use headings to create page groups like this one​
 
-* [[Cheat-Sheets/README|Cheat-Sheets]]
-    * [[github]]
+- [Cheat-Sheets](Cheat-Sheets/README.md)
+    * [github](github.md)
+    * [obsidian](obsidian.md)
 
-- [[Homelab How-To/README|Homelab How-To]]
-    - [[docker]]
-    - [[pi-hole]]
-    - [[wireguard]]
-
+- [Homelab How To](Homelab%20How-To/README.md)
+	- [docker](docker.md)
+	- [pi-hole](pi-hole.md)
+	- [wireguard](wireguard.md)
 ## A second-page group​
 
-* [[Application Documentation/README|Application Docs]]
-	* [[Azure]]
-	* [[Google]]
+- [Application Docs](Application%20Documentation/README.md)
+	- [Google](Google.md)
+	- [Azure](Azure.md)
