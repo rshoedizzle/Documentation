@@ -1,0 +1,1 @@
+This section houses a collection of concise, at-a-glance reference materials, such as command line snippets and program shortcuts, organized by application or tool for rapid retrieval.
