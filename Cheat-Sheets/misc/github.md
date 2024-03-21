@@ -47,6 +47,32 @@ Change remote URL:
 Remove remote name: 
 `git remote remove origin`
 
+Remove file from repository:
+`git rm --cached <file-path>`
+
+Remove directory from repository:
+`git rm -r --cached <directory-path>`
+
+Creating and adding files to `.gitignore`:
+1. Create `.gitignore` if it does not exist
+	`touch .gitignore`
+2. Update `.gitignore`:
+
+	You will need to edit and add patterns representing the files or directories you wish to ignore. Each line in the `.gitignore` file specifies a pattern. Here are some examples:
+	
+	- Ignore a specific file: `secret.txt`
+	- Ignore all `.log` files: `*.log`
+	- Ignore a specific directory: `bin/` (ignoring the directory called bin)
+	- Ignore all `.txt` files in a specific directory: `docs/*.txt`
+	
+	1. **Using a Text Editor:** Open your `.gitignore` file in any text editor. Add the patterns for the files or directories you want to ignore, each on a new line. Save the file after making your changes.
+	    
+	2. **Using Command Line:** You can also append entries to your `.gitignore` file directly from the command line. For example, to ignore all `.log` files, you could use: 
+		`echo "*.log" >> .gitignore`
+3. Add and commit the `.gitignore` file:
+	`git add .gitignore`
+	`git commit -m "Add/update .gitignore"`
+
 ### **Resources:**
 
 Setting Up personal access token: https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens
