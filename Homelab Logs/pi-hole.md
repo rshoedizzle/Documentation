@@ -413,7 +413,7 @@ The solution to this is to disable secure DNS in Chrome, but then re-enable it n
 **Docker installation:**
 {% embed url="https://github.com/pi-hole/docker-pi-hole" %}
 
-**Bare metal basic installation:**
+**Basic installation:**
 {% embed url="https://docs.pi-hole.net/main/basic-install/" %}
 
 **Installing Unbound:**
