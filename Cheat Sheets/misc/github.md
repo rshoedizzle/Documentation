@@ -52,6 +52,6 @@ Remove directory from repository: `git rm -r --cached <directory-path>`
    `git add .gitignore`\
    `git commit -m "Add/update .gitignore"`
 
-**Resources:**
-
+##### Resources:
+**Personal Access Token:**
 {% embed url="https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens" %}
