@@ -14,11 +14,11 @@
 ## Homelab Logs
 
 * [Overview](<Homelab Logs/Overview.md>)
-* [pi-hole](homelab-logs/pi-hole.md)
-* [wireguard](homelab-logs/wireguard.md)
+* [pi-hole](Homelab Logs/pi-hole.md)
+* [wireguard](Homelab Logs/wireguard.md)
 
 ## Enterprise Toolkit​
 
 * [Overview](<Enterprise Toolkit/Overview.md>)
-* [Azure](enterprise-toolkit/azure.md)
-* [Google](enterprise-toolkit/google.md)
+* [Azure](Enterprise Toolkit/azure.md)
+* [Google](Enterprise Toolkit/google.md)
