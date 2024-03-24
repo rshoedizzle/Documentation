@@ -11,8 +11,8 @@ Docker Compose is a tool for running multi-container applications on Docker defi
 	```console
 	docker compose version
 	```
-
-	Expected Output: 
+	\
+		Expected Output: 
 	```
 	Docker Compose Version vN.N.N
 	```
