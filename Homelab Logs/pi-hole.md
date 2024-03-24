@@ -1,4 +1,3 @@
-# Pi-hole
 The Pi-hole is a DNS sinkhole that protects your devices from unwanted content, without installing any client-side software. It resolves IP addresses and domain names (DNS lookup) and checks the address against a block list or not. If the address is on the block list, the request will be blocked.
 
 # Docker Container Installation
@@ -49,6 +48,8 @@ sudo reboot
 ```
 
 5. That is all the software you need on your Linux system to run Pi-Hole within a Docker container.
+
+---
 
 ## Installing Pi-Hole Docker Container
 
@@ -214,6 +215,8 @@ All you need to do now is run the following command within the terminal.
 sudo docker compose up -d
 ```
 
+---
+
 ## Accessing the Pi-Hole Web Interface
 
 Now that we have the Pi-Hole docker container up and running on your system, we can proceed to use its web interface.
@@ -257,6 +260,8 @@ With your password typed in, click the “`Log In`” button (**2.**)
 5. With access to the dashboard, now is a good time to start changing your device’s DNS to use Pi-Hole.
 	
 When setting the DNS servers, you must use the IP belonging to the device you are running Pi-Hole on.
+
+---
 
 ## Updating the Pi-Hole Docker Container
 
@@ -331,6 +336,8 @@ This will vary depending on your individual router.
 7. Enter in IP Address of Pi-Hole as primary DNS server.
 8. Select **Save**
 
+---
+
 ## Pi-hole Admin Navigation
 ### Adding More Block Lists
 1. Select Adlists
@@ -350,6 +357,8 @@ This will vary depending on your individual router.
 4. Look for client machine to disable blocking for.
 5. Select client and select **Add**
 6. Change Group Assignment to be the "NoBlocking" group and *not* the "default" group.
+
+---
 
 ## Using Unbound for Secure DNS
 
@@ -400,7 +409,7 @@ The solution to this is to disable secure DNS in Chrome, but then re-enable it n
 		```
 
 ---
-## Resources:
+## Resources
 **Docker installation:**
 {% embed url="https://github.com/pi-hole/docker-pi-hole" %}
 
