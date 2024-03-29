@@ -1,0 +1,2 @@
+WireGuard is an **_extremely simple yet fast and modern VPN_** that utilizes state-of-the-art cryptography. Comparing to other solutions, such as OpenVPN or IPsec, it aims to be **faster, simpler, and leaner** while avoiding the massive overhead involved with other VPN solutions. A combination of extremely high-speed cryptographic primitives and the fact that WireGuard lives inside the Linux kernel means that secure networking can be very high-speed.
+

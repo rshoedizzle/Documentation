@@ -1,4 +1,4 @@
-# github
+# git
 
 ## Connecting to Remote Repository
 

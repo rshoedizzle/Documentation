@@ -1,6 +1,37 @@
 The Pi-hole is a DNS sinkhole that protects your devices from unwanted content, without installing any client-side software. It resolves IP addresses and domain names (DNS lookup) and checks the address against a block list or not. If the address is on the block list, the request will be blocked.
 
-# Docker Container Installation
+# Installing Pi-Hole Basic Installation
+## One-Step Automated Install
+
+Those who want to get started quickly and conveniently may install Pi-hole using the following command:
+```console
+curl -sSL https://install.pi-hole.net | bash
+```
+## Alternative 1: Clone our repository and run
+
+```console
+git clone --depth 1 https://github.com/pi-hole/pi-hole.git Pi-hole 
+cd "Pi-hole/automated install/" 
+sudo bash basic-install.sh
+```
+
+## Alternative 2: Manually download the installer and run
+```console
+wget -O basic-install.sh https://install.pi-hole.net 
+sudo bash basic-install.sh
+```
+
+## Alternative 3: Use Docker to deploy Pi-hole
+
+Please refer to the [Pi-hole docker repo](https://github.com/pi-hole/docker-pi-hole) to use the Official Docker Images.
+
+---
+
+# Installing Pi-Hole Docker Container
+
+This section will show you the process of installing Pi-Hole as a Docker container on your Linux-based system. All we need to do within this section is to write a “`docker-compose`” configuration file.
+
+This file tells Docker what containers it needs to download and what ports it needs to open.
 ## System Preparation
 
 >**Note**
@@ -51,13 +82,7 @@ sudo reboot
 
 ---
 
-## Installing Pi-Hole Docker Container
-
-This section will show you the process of installing Pi-Hole as a Docker container on your Linux-based system. All we need to do within this section is to write a “`docker-compose`” configuration file.
-
-This file tells Docker what containers it needs to download and what ports it needs to open.
-
-### Creating a Directory for Pi-Hole
+## Creating a Directory for Pi-Hole
 
 1. Start by creating a directory where you will store the configuration file for the Pi-Hole docker container.
 
@@ -73,7 +98,7 @@ sudo mkdir -p /opt/stacks/pihole
 cd /opt/stacks/pihole
 ```
 
-### Writing the Docker-Compose Configuration File
+## Writing the Docker-Compose Configuration File
 
 3. Our next step is writing the “`compose.yaml`” file. This file is where we will define the Pi-Hole docker container and the options we want passed to the container.
 
@@ -106,7 +131,7 @@ services:
     restart: unless-stopped
 ```
 
-### Configuring the Pi-Hole Configuration File
+## Configuring the Pi-Hole Configuration File
 
 5. Before you save this file, there are three Docker options that you will want to reconfigure for Pi-Hole to suit your setup better.
 #### Setting the Password for the Pi-Hole Web Interface
@@ -125,7 +150,7 @@ Replace with the following, switching out “`SECUREPASSWORD`” with a secure p
       WEBPASSWORD: 'SECUREPASSWORD'
 ```
 
-#### **Configuring the Web Interface Port of Pi-Hole**
+### **Configuring the Web Interface Port of Pi-Hole**
 
 By default, we will set up the Docker container so Pi-Hole will be accessible through port `80` on your system. This could be problematic if you already have something operating on port `80`.
 
@@ -141,7 +166,7 @@ For example, to change the port to “`8080`“, you would replace that line wit
       - "8080:80/tcp"
 ```
 
-#### **Setting the Time Zone for the Pi-Hole Docker Container**
+### **Setting the Time Zone for the Pi-Hole Docker Container**
 
 By default, the Pi-Hole docker container has been configured to use the “`Chicago`” time zone. It is possible, however, to adjust this to your local time zone.
 
@@ -159,11 +184,11 @@ Adjust this value to match your time zone. For example, for Los Angeles, America
       TZ: 'America/Los_Angeles'
 ```
 
-### Saving the Docker-Compose File
+## Saving the Docker-Compose File
 
 6. Once you have made the above changes to the file, save and quit by pressing CTRL + X, followed by Y, then the ENTER key.
 
-### Disabling the Systemd-Resolve Service (Ubuntu Only)
+## Disabling the Systemd-Resolve Service (Ubuntu Only)
 
 7. If you are using Ubuntu to run the Pi-Hole Docker container, you may need to disable the Systemd-resolve service.
 
@@ -205,7 +230,7 @@ nameserver 1.1.1.1
 
 11. Once you have made changes to this file, save and quit by pressing CTRL + X, followed by Y, then the ENTER key.
 
-### Starting the Pi-Hole Docker Container
+## Starting the Pi-Hole Docker Container
 
 12. We can finally start up Pi-Hole’s Docker container on our Linux system.
 
@@ -215,9 +240,10 @@ All you need to do now is run the following command within the terminal.
 sudo docker compose up -d
 ```
 
+
 ---
 
-## Accessing the Pi-Hole Web Interface
+# Accessing the Pi-Hole Web Interface
 
 Now that we have the Pi-Hole docker container up and running on your system, we can proceed to use its web interface.
 
@@ -263,7 +289,7 @@ When setting the DNS servers, you must use the IP belonging to the device you ar
 
 ---
 
-## Updating the Pi-Hole Docker Container
+# Updating the Pi-Hole Docker Container
 
 1. Change to the directory where we wrote the Compose file earlier.
 
@@ -287,10 +313,10 @@ docker compose up -d
 
 ---
 
-## Changing Device DNS to Pi-Hole
+# Changing Device DNS to Pi-Hole
 
-### Client-Specific Configuration
-#### Windows
+## Client-Specific Configuration
+### Windows
 
 DNS settings are specified in the **TCP/IP Properties** window for the selected network connection.
 
@@ -309,7 +335,7 @@ DNS settings are specified in the **TCP/IP Properties** window for the selecte
 7. Select **Use the following DNS server addresses**. If there are any IP addresses listed in the **Preferred DNS server** or **Alternate DNS server**, write them down for future reference.
 8. Replace those addresses with the IP addresses of your Pi-Hole server:
     
-#### Mac
+### Mac
 1. Go to **System Preferences**.
 2. Click on **Network**
 3. Click on network connection you are connected to and click **Advanced**.
@@ -318,15 +344,15 @@ DNS settings are specified in the **TCP/IP Properties** window for the selecte
 6. Click the `+` button at the bottom and insert IP address of Pi-Hole server.
 7. Click **OK**
 
-### Network-Wide Configuration
+## Network-Wide Configuration
 This will vary depending on your individual router.
 
-#### General
+### General
 1. Navigate to DHCP Configuration
 2. Change DHCP DNS Server to Pi-Hole server IP address.
 3. Save changes.
 
-#### Google Nest Router
+### Google Nest Router
 1. Open Google Home App
 2. Select Wi-Fi
 3. Tap on **Network Settings**
@@ -338,8 +364,8 @@ This will vary depending on your individual router.
 
 ---
 
-## Pi-hole Admin Navigation
-### Adding More Block Lists
+# Pi-hole Admin Navigation
+## Adding More Block Lists
 1. Select Adlists
 2. Paste URL block list into Address field
 	1. Big Blocklist Collection: https://firebog.net/
@@ -350,7 +376,7 @@ This will vary depending on your individual router.
 5. On the admin panel, navigate to **Settings**
 6. Click **Restart DNS Resolver**
 
-### Disabling Blocking for Clients
+## Disabling Blocking for Clients
 1. In the admin panel navigate to **Groups**
 2. Create a new group called "NoBlocking"
 3. Navigate to **Clients**
@@ -360,61 +386,46 @@ This will vary depending on your individual router.
 
 ---
 
-## Using Unbound for Secure DNS
+# Using Unbound for Secure DNS
+
 
 If multiple DNS servers are configured, Chrome can likely bypass Pi-Hole DNS servers and use a fallback or alternative DNS server due to the preference of Chrome wanting to use "Secure DNS"
 
 The solution to this is to disable secure DNS in Chrome, but then re-enable it network-wide via Unbound
 
-### Disabling Secure DNS in Chrome
+## Disabling Secure DNS in Chrome
 1. In Google Chrome, navigate to the 3 dots in the top right and select Settings
 2. Select Privacy and Security
 3. Select Security
 4. Untick the option for "Use secure DNS" (Encrypt the names of sites you visit)
 
-### Installing Unbound for Network-Wide Secure DNS
-1. Install required packages
-	  ```console
-   sudo apt install -y unbound dnsutils
-	```
-2. Grab the configuration file
-   ```console
-   sudo wget https://bartonbytes.com/pihole.txt -O /etc/unbound/unbound.conf.d/pihole.conf
-	```
 
-	*Note: This configuration opens port 5533*
+## The Use for Unbound for Network-Wide Secure DNS
 
-3. Make sure that Unbound is running
-   ```console
-   sudo systemctl restart unbound && sudo systemctl enable unbound
-   ```
+Pi-hole includes a caching and _forwarding_ DNS server, now known as _FTL_DNS. After applying the blocking lists, it forwards requests made by the clients to configured upstream DNS server(s). However, as has been mentioned by several users in the past, this leads to some privacy concerns as it ultimately raises the question: _Whom can you trust?_ Recently, more and more small (and not so small) DNS upstream providers have appeared on the market, advertising free and private DNS service, but how can you know that they keep their promises? Right, you can't.
 
-4. Check that Unbound can resolve DNS names
-   ```console
-   dig @127.0.0.1 example.com -p 5533
-	```
-5. Tell Pi-Hole to use Unbound server for all outbound DNS
-	1. Navigate to Pi-hole Admin Console
-	2. Click **Settings**
-	3. Click the **DNS** tab
-	4. Unselect current Upstream DNS Servers
-	5. Select Custom Upstream DNS Server and enter the localhost Unbound address and port
-	   ```console
-	   127.0.0.1#5533
-		```
-	6. Click **Save** 
-	7. Can verify Unbound is being used as secure DNS
-	   ```console
-	   dig @127.0.0.1 example.com
-		```
+Furthermore, from the point of an attacker, the DNS servers of larger providers are very worthwhile targets, as they only need to poison one DNS server, but millions of users might be affected. Instead of your bank's actual IP address, you could be sent to a phishing site hosted on some island. This scenario has [already happened](https://www.zdnet.com/article/dns-cache-poisoning-attacks-exploited-in-the-wild/) and it isn't unlikely to happen again...
+
+When you operate your own (tiny) recursive DNS server, then the likeliness of getting affected by such an attack is greatly reduced.
+
+### [What _is_ a recursive DNS server?](https://docs.pi-hole.net/guides/dns/unbound/#what-is-a-recursive-dns-server "Permanent link")
+
+The first distinction we have to be aware of is whether a DNS server is _authoritative_ or not. If I'm the authoritative server for, e.g., `pi-hole.net`, then I know which IP is the correct answer for a query. Recursive name servers, in contrast, resolve any query they receive by consulting the servers authoritative for this query by traversing the domain. Example: We want to resolve `pi-hole.net`. On behalf of the client, the recursive DNS server will traverse the path of the domain across the Internet to deliver the answer to the question.
+
+>*Note*
+>
+>*If wanting to install Unbound for use as a recursive DNS server, refer to the attached resources and match your Unbound installation type with your Pi-hole installation type. This will aid in a headache with networking difficulties. IE if Pi-hole is installed via Docker, the container will have its own IP and will not be used properly when Unbound attempts to forward queries to Pi-hole.*
 
 ---
-## Resources
-**Docker installation:**
+# Resources
+**Pi-hole Docker installation:**
 {% embed url="https://github.com/pi-hole/docker-pi-hole" %}
 
-**Basic installation:**
+**Pi-hole Basic installation:**
 {% embed url="https://docs.pi-hole.net/main/basic-install/" %}
 
-**Installing Unbound:**
-{% embed url="https://bartonbytes.com/posts/configure-pi-hole-for-dns-over-tls/" %}
+**Unbound Basic Installation:**
+{% embed url="https://docs.pi-hole.net/guides/dns/unbound/" %}
+
+**Unbound Docker Installation:**
+{% embed url="https://github.com/MatthewVance/unbound-docker?tab=readme-ov-file" %}
