@@ -19,14 +19,12 @@
 
 ## Homelab Logs
 
-* [Overview](<Homelab Logs/Overview.md>)
 * [pi-hole](<Homelab Logs/pi-hole.md>)
-* [unbound](<Homelab Logs/unbound.md>)
 * [pivpn](<Homelab Logs/pivpn.md>)
+* [unbound](<Homelab Logs/unbound.md>)
 * [wireguard](<Homelab Logs/wireguard.md>)
 
 ## Enterprise Toolkit​
 
-* [Overview](<Enterprise Toolkit/Overview.md>)
 * [Azure](<Enterprise Toolkit/azure.md>)
 * [Google](<Enterprise Toolkit/google.md>)
